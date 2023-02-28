@@ -47,7 +47,7 @@
     <ExchangeRatesComponent :currencies="currencies" />
 
     <button 
-      @click="this.isPopUpOpen = true"
+      @click="$event => this.isPopUpOpen = true"
       class="add-curracy_button"
     >
       Add new currancy
@@ -56,7 +56,7 @@
     <PopUpComponent 
       v-if="isPopUpOpen" 
       @add-currency="addCurrancy"
-      @close="this.isPopUpOpen = false"
+      @close="$event => this.isPopUpOpen = false"
   />
   </main>
 </template>
